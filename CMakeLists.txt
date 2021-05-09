@@ -62,6 +62,10 @@ option(SPIRV_CROSS_MISC_WARNINGS "Misc warnings useful for Travis runs." OFF)
 
 option(SPIRV_CROSS_FORCE_PIC "Force position-independent code for all targets." OFF)
 
+if (MSVC)
+	add_compile_options(/MD)
+endif()
+
 if(${CMAKE_GENERATOR} MATCHES "Makefile")
 	if(${CMAKE_CURRENT_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_BINARY_DIR})
 		message(FATAL_ERROR "Build out of tree to avoid overwriting Makefile")
