@@ -4,6 +4,7 @@
 /test
 /spirv-cross
 /obj
+/build
 /msvc/x64
 /msvc/Debug
 /msvc/Release
